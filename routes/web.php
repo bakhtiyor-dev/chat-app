@@ -19,7 +19,6 @@ if (App::environment('production')) {
     URL::forceScheme('https');
 }
 
-
 Route::redirect('/', '/login');
 
 Route::get('/test', function () {
