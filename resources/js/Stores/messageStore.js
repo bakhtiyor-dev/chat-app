@@ -9,6 +9,7 @@ export const useMessageStore = defineStore('messageStore', {
     },
     actions: {
         async fetchMessages() {
+            console.log(1);
             const response = await fetch(route('chat.fetch-messages',useActiveUserStore().activeUser.id));
             this.messages = await response.json()
         },

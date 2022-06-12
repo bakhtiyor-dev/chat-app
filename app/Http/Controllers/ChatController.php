@@ -37,11 +37,13 @@ class ChatController extends Controller
     {
         $userId = auth()->id();
 
-        return Message::query()->where('receiver_id', $activeUserId)
-            ->orWhere('sender_id', $activeUserId)
-            ->orWhere('receiver_id', $userId)
-            ->orWhere('sender_id', $userId)
-            ->get()
-            ->toJson();
+        return Message::query()->where([
+            ['receiver_id', '=', $activeUserId],
+            ['sender_id', '=', $userId]
+        ])->orWhere([
+            ['receiver_id', '=', $userId],
+            ['sender_id', '=', $activeUserId]
+        ])->get()->toJson();
+
     }
 }

@@ -3,7 +3,6 @@ import {useMessageStore} from "@/Stores/messageStore";
 import MessageLeft from "@/Components/Chat/MessageLeft";
 import MessageRight from "@/Components/Chat/MessageRight";
 const messageStore = useMessageStore();
-messageStore.fetchMessages();
 messageStore.listen();
 </script>
 <template>

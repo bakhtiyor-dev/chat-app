@@ -36,7 +36,7 @@ const activeUserStore = useActiveUserStore();
                     <img class="object-cover w-10 h-10 rounded-full"
                          src="https://cdn.icon-icons.com/icons2/1378/PNG/512/avatardefault_92824.png" alt="username"/>
                     <span class="block ml-2 font-bold text-gray-600">{{ activeUserStore.activeUser.name }}</span>
-                    <span class="absolute w-3 h-3 bg-green-600 rounded-full left-10 top-3"></span>
+<!--                    <span class="absolute w-3 h-3 bg-green-600 rounded-full left-10 top-3"></span>-->
                   </div>
 
                   <Messages/>
