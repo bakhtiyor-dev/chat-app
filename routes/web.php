@@ -21,10 +21,6 @@ if (App::environment('production')) {
 
 Route::redirect('/', '/login');
 
-Route::get('/test', function () {
-    \App\Events\OrderStatusUpdate::dispatch();
-});
-
 Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('/dashboard', [ChatController::class, 'index'])->name('dashboard');
     Route::post('/send', [ChatController::class, 'send'])->name('chat.send');

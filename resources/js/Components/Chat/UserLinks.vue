@@ -11,7 +11,7 @@ const activeUserStore = useActiveUserStore();
       :class="{'bg-gray-100' : activeUserStore.activeUser?.id === user.id}"
     >
       <img class="object-cover w-10 h-10 rounded-full"
-           src="https://cdn.icon-icons.com/icons2/1378/PNG/512/avatardefault_92824.png" alt="username"/>
+           src="/avatardefault.png" alt="username"/>
       <div class="w-full pb-2">
         <div class="flex justify-between">
           <span class="block ml-2 font-semibold text-gray-600">{{ user.name }}</span>
